@@ -87,7 +87,34 @@
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            JavaScript is a scripting language. The computer does not understand this JavaScript code, so we have some application programs like node.js or a browser JavaScript engine (Google V8 engine, Spider monkey, JavaScript core, etc.) whose job is to implement this JavaScript code. And this code is converted into machine code, which our computer can actually understand. And finally, our code runs, displays and creating a dynamic web page.
+                          <p>
+                            JavaScript is a synchronous, single-thread scripting language; <br>
+                            Every web browser has a javascript engine. this engine execute the javascript code and show its output on the web browser;
+                            When javascript code execute in this engine we got two things - Execution Context and Call Stack;
+                            There are two type of Execution Context - Global Execution Context and Funtional Execution Context;
+                            Call Stack is like a task-list with a LIFO (Last in, First out) structure, where all the Execution Context are stored.
+                            <br>
+                            Now, Javascript is synchronous language so it run line by line and single threaded language so it can do only one task at a time.
+                            When Javascript code run in the web browser there created a Global Execution Context. In this Execution Context there are two phase.
+                            One is Creating phase and another is Execution phase.
+                            <br>
+                            If we want to execute a code Example: 
+                            <pre>
+                            var number = 1
+                            function square(num) {
+                            var square = num * num
+                            return square;
+                            }
+                            var squareOf4 = square(number);
+                            </pre>
+                            In this code. firstly The Global Execution Context will run in the Call Stack; Then the Global Execution Context first phase come,
+                            in this first phase the variable and the funtion will be store in the Memory of the Context; then the second phase come, is this phase
+                            it define the variables values; 
+                            and if it find any function that called or invocked; then another context will be created thats => Funtional Execution Context will run like the Global Execution Context;
+                            <br>
+                            and after the run the Execution Context it will be removed one by  one from the call stack;
+                            an finally the Global Execution Context will be removed from the Call Stack = and we will see the output;
+                                                      </p>    
                         </div>
                       </div>
                     </div>
